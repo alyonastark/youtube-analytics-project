@@ -57,14 +57,14 @@ class Channel:
         return self.channel['items'][0]['statistics']['viewCount']
 
     @classmethod
-    """Возвращает объект для работы с Youtube API"""
     def get_service(cls):
+        """Возвращает объект для работы с Youtube API"""
         return cls.youtube
 
     def to_json(self, file_name='moscowpython.json'):
         """Сохраняет в файл значения атрибутов экземпляра Channel"""
         with open(file_name, 'w', encoding='utf-8') as file:
-            json.dump(self.channel, file_name)
+            json.dump(self.channel, file)
 
 
 
